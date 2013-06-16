@@ -33,6 +33,8 @@ gem 'haml-rails'
 group :development do 
   gem 'debugger'
   gem 'pry_debug'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 # To use ActiveModel has_secure_password

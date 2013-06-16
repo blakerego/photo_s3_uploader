@@ -1,0 +1,12 @@
+%h1
+  Listing all photos
+
+%ul 
+  -if @photos.present?
+    - @photos.each do |photo| 
+      %li 
+        = photo.name
+  - else 
+    No photos to display
+
+= link_to "Add new photo", new_photo_path

@@ -1,5 +1,7 @@
 PhotoS3Uploader::Application.routes.draw do
   root :to => 'home#index'
+
+  resources :photos
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
