@@ -1,4 +1,5 @@
 
-= simple_form_for @photo do |f|
+= simple_form_for @photo, :html => {"multi-part" => true} do |f|
   = f.input :name
+  = f.file_field :image
   = f.submit "Upload Photo"
