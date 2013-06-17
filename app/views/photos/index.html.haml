@@ -5,8 +5,13 @@
   -if @photos.present?
     - @photos.each do |photo| 
       %li 
-        = photo.name
+        = link_to photo.name, photo_path(photo)
+        = image_tag photo.image_url(:thumb).to_s
   - else 
     No photos to display
 
-= link_to "Add new photo", new_photo_path
+/ = link_to "Add new photo", new_photo_path
+
+= direct_upload_form_for @uploader do |f|
+  = f.file_field :image
+  = f.submit "Upload Image"
